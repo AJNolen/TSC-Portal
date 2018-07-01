@@ -3,25 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TSC Portal", "..\..\..\Programming\TSC Portal\", "{A7EE1FC9-965B-4EA9-BDF1-EA83D0ECAD59}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TSC Portal", "..\..\..\Visual Studio 2015\Projects\TSC Portal\", "{A7EE1FC9-965B-4EA9-BDF1-EA83D0ECAD59}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.1"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_7138"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\Programming\TSC Portal\"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\Visual Studio 2015\Projects\TSC Portal\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7138\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_7138"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\Programming\TSC Portal\"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\Visual Studio 2015\Projects\TSC Portal\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7138\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "7138"
-		SlnRelativePath = "..\..\..\Programming\TSC Portal\"
+		SlnRelativePath = "..\..\..\Visual Studio 2015\Projects\TSC Portal\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject

@@ -1,0 +1,175 @@
+﻿<!-- This is the Master page for the TSC Portal  -->
+
+
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>Home | TSC Dashboard</title>
+
+        <!-- Metadata -->
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+        <!-- MDL Core CSS -->
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css"/>
+        
+        <!-- MDL Plugins CSS -->
+        <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/kybarg/mdl-selectfield/mdl-menu-implementation/mdl-selectfield.min.css"> -->
+        <link rel="stylesheet" href="Style/mdl-selectfield.min.css" type="text/css"/>
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+        
+        <!-- External CSS -->
+        <link href="Style/index.css" rel="stylesheet" type="text/css" />
+
+        <!-- MDL Core JS -->
+        <script defer="" src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        
+        <!-- MDL Plugins JS -->
+        <!-- <script defer src="https://cdn.rawgit.com/kybarg/mdl-selectfield/mdl-menu-implementation/mdl-selectfield.min.js"></script> -->
+        <script defer="" src="Java/mdl-selectfield.min.js"></script>
+        
+        <!-- External JS -->
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   
+     <div>
+        
+                 
+        <!-- Layout Div -->
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            
+            <!-- Header -->
+            <header class="mdl-layout__header">
+                
+                <!-- Header Bar -->
+                <div class="mdl-layout__header-row">
+                
+                    <!-- Header Title -->
+                    <span class="mdl-layout-title">TSC Dashboard</span>
+                    
+                    <span class="material-icons userIcon">account_circle</span><span class="displayUser"><asp:LoginName id="LoginName1" runat="server" FormatString ="{0}" /></span>
+                    
+                </div>
+                
+                <!-- Header Tabs -->
+                <!-- For some reason the active tab is currently not under lined. I gotta figure out why -->
+                <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                
+                    <a href="/Webpages/Default.aspx" class="mdl-layout__tab is-active">Help Desk</a>
+                    <a href="/Webpages/MessageBoard.aspx" class="mdl-layout__tab">Message Board</a>
+                    <a href="/Webpages/Applications.aspx" class="mdl-layout__tab">Applications</a>
+                    
+                </div>
+            
+            </header>
+            <!-- End Header -->
+            
+            <!-- Header Drawer -->        
+            <div class="mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50" aria-hidden="true">
+
+              <!-- Drawer Title -->
+              <span class="mdl-layout-title">Links</span>
+
+              <!-- Drawer Links -->
+              <!-- Warning: Now entering href hell -->
+              <!-- Abandon all hope, ye who enter here -->
+              <nav class="mdl-navigation">
+                <a id="1" target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://adadmin.carilion.com/">
+                  <i class="material-icons">folder</i>&nbsp; AD Admin</a> 
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="https://apps.carilionclinic.org/">
+                  <i class="material-icons">apps</i>&nbsp; Apps Portal</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="https://192.168.137.9/cgi-bin/common/login/webLogin/">
+                  <i class="material-icons">phone</i>&nbsp; Avaya VM Admin</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://blackboard.carilionclinic.org/">
+                  <i class="material-icons ff">school</i>&nbsp; BB Carilion</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://blackboard.jchs.edu/">
+                  <i class="material-icons ff">school</i>&nbsp; BB JCHS</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://blackboard.vtc.carilionclinic.org/">
+                  <i class="material-icons ff">school</i>&nbsp; BB VTC</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://www.healthcaresource.com/carilion/index.cfm?fuseaction=search.categoryList&template=dsp_job_categories.cfm">
+                  <i class="material-icons">work</i>&nbsp; Carilion Jobs</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="https://carilion.csod.com/client/carilion/default.aspx">
+                  <i class="material-icons">school</i>&nbsp; Cornerstone</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://wss-prd-web01/helpdesk/TSCTeamSite/Shared%20Documents/Obsolete/e-mailReplies.pdf">
+                  <i class="material-icons">email</i>&nbsp; Email Replies</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://chsweb.carilion.com/Data/CarilionEpicHelp/">
+                  <i class="material-icons">help</i>&nbsp; Epic Help</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://wss-prd-web01/epic/default.aspx? RootFolder=%2fepic%2fShared%20Documents%2fEpic%20Icons&FolderCTID=&View=%7bC5E5C063%2d0A05%2d4BB1%2d8049%2d8E22BE7ADEF8%7d">
+                  <i class="material-icons">link</i>&nbsp; Epic ICAs</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://insidecarilion.org/hubs/tsg">
+                  <i class="material-icons">work</i>&nbsp; Inside Carilion</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="https://sslvpn.carilion.com">
+                  <i class="material-icons">vpn_key</i>&nbsp; SSLVPN</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="https://portal.fiberlink.com/emc/">
+                  <i class="material-icons">smartphone</i>&nbsp; MaaS360</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://maxmo-prd-app01:9080/maximo/webclient/login/login.jsp">
+                  <i class="material-icons ie">assessment</i>&nbsp; Maximo</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://sharepoint/helpdesk/TSCTeamSite/Shared%20Documents/TSC%20Endpoint%20Encryption%20Challenge%20Code%20Process.pdf">
+                  <i class="material-icons">lock</i>&nbsp; McAfee Guide</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="https://sat-prd-epo01:8443/core/orionSplashScreen.do">
+                  <i class="material-icons">lock_open</i>&nbsp; McAfee Unlock</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://nice.carilion.com/">
+                  <i class="material-icons">videocam</i>&nbsp; NICE Perform</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://npm.carilion.com/Orion/Login.aspx?ReturnUrl=%2f">
+                  <i class="material-icons">settings_ethernet</i>&nbsp; NPM</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://mytotalaccess.carilion.com/">
+                  <i class="material-icons">attach_money</i>&nbsp; My Total Access</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="https://email.carilionclinic.org/">
+                  <i class="material-icons">email</i>&nbsp; Outlook Web</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://wss-prd-web01/helpdesk/TSCTeamSite/Shared%20Documents/Paper%20Ticket.xls">
+                  <i class="material-icons">attachment</i>&nbsp; Paper Ticket</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://selfservice.jchs.edu/">
+                  <i class="material-icons">school</i>&nbsp;  Self Service</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://eps.carilion.com/printeradmin/">
+                  <i class="material-icons">print</i>&nbsp; Printer Admin</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://service/">
+                  <i class="material-icons">list</i>&nbsp; Service Portfolio</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="https://qradarconsole.carilion.com/console/qradar/jsp/QRadar.jsp">
+                  <i class="material-icons">security</i>&nbsp; QRadar</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://sover-prd-web01/himumt/">
+                  <i class="material-icons">lock_open</i>&nbsp; Sovera Password</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="https://itsplunk.carilion.com:8000">
+                  <i class="material-icons ff">build</i>&nbsp; Splunk</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://sharepoint/helpdesk/TSCTeamSite/_layouts/15/start.aspx#/Lists/TSC%20Exclusive%20Passwords/Item%20Detail.aspx">
+                  <i class="material-icons">lock</i>&nbsp; TSC Passwords</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="file://///Shared-fs/Shared/SHARED/helpdesk/">
+                  <i class="material-icons">folder_open</i>&nbsp; TSC Share Drive</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://sharepoint/helpdesk/TSCTeamSite/_layouts/15/start.aspx#/">
+                  <i class="material-icons">cloud</i>&nbsp; TSC Sharepoint</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://library.vitalyst.com/carilion ">
+                  <i class="material-icons">help</i>&nbsp; Vitalyst Tips</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://eps.carilion.com/">
+                  <i class="material-icons">print</i>&nbsp; VPSX</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://carilion.hosted.xmatters.com">
+                  <i class="material-icons">notifications_active</i>&nbsp; (x)Matters</a>
+                <a target="_blank" class="mdl-navigation__link mdl-color-text--blue-grey-400" href="http://webxchange/webdirectory/default.aspx/">
+                  <i class="material-icons">report</i>&nbsp; XTEND</a>
+                </nav>  <!-- End Drawer Links -->
+
+              </div> <!-- End Header Drawer -->
+            
+            <!-- Main Layout -->
+            <main class="mdl-layout__content">
+               
+        
+      <div class="mdl-layout__tab-panel is-active">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+
+        </asp:ContentPlaceHolder>
+
+      </div>
+       </main>
+    </div>
+         </div>
+</body>
+</html>
